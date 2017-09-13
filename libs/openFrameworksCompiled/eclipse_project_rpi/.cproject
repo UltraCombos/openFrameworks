@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="cdt.managedbuild.toolchain.gnu.cross.base.1423627271">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.toolchain.gnu.cross.base.1423627271" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<macros>
+					<stringMacro name="of_cxx_flags" type="VALUE_TEXT" value="-std=c++14 -march=armv6 -mfpu=vfp -mfloat-abi=hard -ftree-vectorize -pipe -pthread -fPIC "/>
+					<stringMacro name="toolchain_root_loc" type="VALUE_TEXT" value="/opt/cross/bin"/>
+					<stringMacro name="rpi_root_loc" type="VALUE_TEXT" value="/home/pi/RPI_ROOT"/>
+				</macros>
+				<externalSettings>
+					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/rpi_root/opt/vc/include/interface/vmcs_host/linux"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/rpi_root/opt/vc/include/interface/vcos/pthreads"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/rpi_root/opt/vc/include/IL"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/rpi_root/opt/vc/include"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/rpi_root/usr/include/c++/4.9"/>
+					</externalSetting>
+					<externalSetting languages="org.eclipse.cdt.core.g++">
+						<entry flags="NONE" kind="includePath" name="/home/pi/RPI_ROOT/usr/include/c++/4.9"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/video"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/utils"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/types"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/sound"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/math"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/graphics"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/gl"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/events"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/communication"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/app"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/3d"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/3rd_libs/kiss/include"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/3rd_libs/poco/include"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/3rd_libs/tess2/include"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/3rd_libs/utf8cpp/include"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/3rd_libs/utf8cpp/include/utf8"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/3rd_libs/glfw/include"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/3rd_libs/glfw/include/GLFW"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/3rd_libs/fmodex/include"/>
+						<entry flags="RESOLVED" kind="macro" name="USE_VCHIQ_ARM" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="USE_EXTERNAL_OMX" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="USE_EXTERNAL_LIBBCM_HOST" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="TARGET_RASPBERRY_PI" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="TARGET_POSIX" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="PIC" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="OMX_SKIP64BIT" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="OMX" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="HAVE_LIBOPENMAX" value="2"/>
+						<entry flags="RESOLVED" kind="macro" name="HAVE_LIBBCM_HOST" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="GCC_HAS_REGEX" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="_REENTRANT" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="_LARGEFILE64_SOURCE" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="_FORTIFY_SOURCE" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="_FILE_OFFSET_BITS" value="64"/>
+						<entry flags="RESOLVED" kind="macro" name="__STDC_LIMIT_MACROS" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="__STDC_CONSTANT_MACROS" value=""/>
+					</externalSetting>
+				</externalSettings>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildProperties="" description="" id="cdt.managedbuild.toolchain.gnu.cross.base.1423627271" name="Debug" parent="org.eclipse.cdt.build.core.emptycfg">
+					<folderInfo id="cdt.managedbuild.toolchain.gnu.cross.base.1423627271.1477667556" name="/" resourcePath="">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.cross.base.1145101079" name="Cross GCC" superClass="cdt.managedbuild.toolchain.gnu.cross.base">
+							<option id="cdt.managedbuild.option.gnu.cross.prefix.2088953409" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" value="arm-linux-gnueabihf-" valueType="string"/>
+							<option id="cdt.managedbuild.option.gnu.cross.path.1853774747" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" value="${toolchain_root_loc}" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.234761307" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
+							<builder buildPath="${workspace_loc:/openFrameworks_rpi/compile_work/project}" cleanBuildTarget="CleanDebug" id="cdt.managedbuild.builder.gnu.cross.1581741575" incrementalBuildTarget="Debug" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" parallelBuildOn="true" parallelizationNumber="optimal" superClass="cdt.managedbuild.builder.gnu.cross">
+								<outputEntries>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="compile_work/project"/>
+								</outputEntries>
+							</builder>
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.2075246648" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
+								<option id="gnu.c.compiler.option.include.paths.519857275" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false"/>
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.76994059" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="GCC_HAS_REGEX"/>
+									<listOptionValue builtIn="false" value="TARGET_RASPBERRY_PI"/>
+									<listOptionValue builtIn="false" value="PIC"/>
+									<listOptionValue builtIn="false" value="_REENTRANT"/>
+									<listOptionValue builtIn="false" value="_LARGEFILE64_SOURCE"/>
+									<listOptionValue builtIn="false" value="_FILE_OFFSET_BITS=64"/>
+									<listOptionValue builtIn="false" value="_FORTIFY_SOURCE"/>
+									<listOptionValue builtIn="false" value="__STDC_CONSTANT_MACROS"/>
+									<listOptionValue builtIn="false" value="__STDC_LIMIT_MACROS"/>
+									<listOptionValue builtIn="false" value="TARGET_POSIX"/>
+									<listOptionValue builtIn="false" value="HAVE_LIBOPENMAX=2"/>
+									<listOptionValue builtIn="false" value="OMX"/>
+									<listOptionValue builtIn="false" value="OMX_SKIP64BIT"/>
+									<listOptionValue builtIn="false" value="USE_EXTERNAL_OMX"/>
+									<listOptionValue builtIn="false" value="HAVE_LIBBCM_HOST"/>
+									<listOptionValue builtIn="false" value="USE_EXTERNAL_LIBBCM_HOST"/>
+									<listOptionValue builtIn="false" value="USE_VCHIQ_ARM"/>
+								</option>
+								<option id="gnu.c.compiler.option.dialect.std.210573308" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.323511069" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1191973841" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
+								<option id="gnu.cpp.compiler.option.include.paths.1890427964" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/3rd_libs/fmodex/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/3rd_libs/glfw/include/GLFW}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/3rd_libs/glfw/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/3rd_libs/utf8cpp/include/utf8}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/3rd_libs/utf8cpp/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/3rd_libs/tess2/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/3rd_libs/poco/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/3rd_libs/kiss/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/3d}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/app}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/communication}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/events}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/gl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/graphics}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/math}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/sound}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/types}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/utils}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/video}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/rpi_root/usr/include/c++/4.9}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/rpi_root/opt/vc/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/rpi_root/opt/vc/include/IL}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/rpi_root/opt/vc/include/interface/vcos/pthreads}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/rpi_root/opt/vc/include/interface/vmcs_host/linux}&quot;"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.950844132" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="GCC_HAS_REGEX"/>
+									<listOptionValue builtIn="false" value="TARGET_RASPBERRY_PI"/>
+									<listOptionValue builtIn="false" value="PIC"/>
+									<listOptionValue builtIn="false" value="_REENTRANT"/>
+									<listOptionValue builtIn="false" value="_LARGEFILE64_SOURCE"/>
+									<listOptionValue builtIn="false" value="_FILE_OFFSET_BITS=64"/>
+									<listOptionValue builtIn="false" value="__STDC_CONSTANT_MACROS"/>
+									<listOptionValue builtIn="false" value="__STDC_LIMIT_MACROS"/>
+									<listOptionValue builtIn="false" value="TARGET_POSIX"/>
+									<listOptionValue builtIn="false" value="HAVE_LIBOPENMAX=2"/>
+									<listOptionValue builtIn="false" value="OMX"/>
+									<listOptionValue builtIn="false" value="OMX_SKIP64BIT"/>
+									<listOptionValue builtIn="false" value="USE_EXTERNAL_OMX"/>
+									<listOptionValue builtIn="false" value="HAVE_LIBBCM_HOST"/>
+									<listOptionValue builtIn="false" value="USE_EXTERNAL_LIBBCM_HOST"/>
+									<listOptionValue builtIn="false" value="USE_VCHIQ_ARM"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.dialect.std.1153842499" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.dialect.flags.280176059" name="Other dialect flags" superClass="gnu.cpp.compiler.option.dialect.flags" useByScannerDiscovery="true" value="${of_cxx_flags}" valueType="string"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.396803815" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.2124804209" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.349871253" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker">
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1256632327" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.archiver.1181324572" name="Cross GCC Archiver" superClass="cdt.managedbuild.tool.gnu.cross.archiver"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.assembler.1281011918" name="Cross GCC Assembler" superClass="cdt.managedbuild.tool.gnu.cross.assembler">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.8060167" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule moduleId="packages"/>
+		</cconfiguration>
+		<cconfiguration id="cdt.managedbuild.toolchain.gnu.cross.base.1423627271.1797868332">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.toolchain.gnu.cross.base.1423627271.1797868332" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<macros>
+					<stringMacro name="of_cxx_flags" type="VALUE_TEXT" value="-std=c++14 -march=armv6 -mfpu=vfp -mfloat-abi=hard -ftree-vectorize -pipe -pthread -fPIC "/>
+					<stringMacro name="toolchain_root_loc" type="VALUE_TEXT" value="/opt/cross/bin"/>
+					<stringMacro name="rpi_root_loc" type="VALUE_TEXT" value="/home/pi/RPI_ROOT"/>
+				</macros>
+				<externalSettings>
+					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/rpi_root/opt/vc/include/interface/vmcs_host/linux"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/rpi_root/opt/vc/include/interface/vcos/pthreads"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/rpi_root/opt/vc/include/IL"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/rpi_root/opt/vc/include"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/rpi_root/usr/include/c++/4.9"/>
+					</externalSetting>
+					<externalSetting languages="org.eclipse.cdt.core.g++">
+						<entry flags="NONE" kind="includePath" name="/home/pi/RPI_ROOT/usr/include/c++/4.9"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/video"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/utils"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/types"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/sound"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/math"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/graphics"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/gl"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/events"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/communication"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/app"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks/3d"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/openFrameworks"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/3rd_libs/kiss/include"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/3rd_libs/poco/include"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/3rd_libs/tess2/include"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/3rd_libs/utf8cpp/include"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/3rd_libs/utf8cpp/include/utf8"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/3rd_libs/glfw/include"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/3rd_libs/glfw/include/GLFW"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="includePath" name="/openFrameworks_rpi/3rd_libs/fmodex/include"/>
+						<entry flags="RESOLVED" kind="macro" name="USE_VCHIQ_ARM" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="USE_EXTERNAL_OMX" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="USE_EXTERNAL_LIBBCM_HOST" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="TARGET_RASPBERRY_PI" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="TARGET_POSIX" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="PIC" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="OMX_SKIP64BIT" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="OMX" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="NDEBUG" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="HAVE_LIBOPENMAX" value="2"/>
+						<entry flags="RESOLVED" kind="macro" name="HAVE_LIBBCM_HOST" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="GCC_HAS_REGEX" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="_REENTRANT" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="_LARGEFILE64_SOURCE" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="_FORTIFY_SOURCE" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="_FILE_OFFSET_BITS" value="64"/>
+						<entry flags="RESOLVED" kind="macro" name="__STDC_LIMIT_MACROS" value=""/>
+						<entry flags="RESOLVED" kind="macro" name="__STDC_CONSTANT_MACROS" value=""/>
+					</externalSetting>
+				</externalSettings>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildProperties="" description="" id="cdt.managedbuild.toolchain.gnu.cross.base.1423627271.1797868332" name="Release" parent="org.eclipse.cdt.build.core.emptycfg">
+					<folderInfo id="cdt.managedbuild.toolchain.gnu.cross.base.1423627271.1797868332." name="/" resourcePath="">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.cross.base.2020214119" name="Cross GCC" superClass="cdt.managedbuild.toolchain.gnu.cross.base">
+							<option id="cdt.managedbuild.option.gnu.cross.prefix.1408447977" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" value="arm-linux-gnueabihf-" valueType="string"/>
+							<option id="cdt.managedbuild.option.gnu.cross.path.963021989" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" value="${toolchain_root_loc}" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.487682607" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
+							<builder buildPath="${workspace_loc:/openFrameworks_rpi/compile_work/project}" cleanBuildTarget="CleanRelease" id="cdt.managedbuild.builder.gnu.cross.134934935" incrementalBuildTarget="Release" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" parallelBuildOn="true" parallelizationNumber="optimal" superClass="cdt.managedbuild.builder.gnu.cross"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.1253948966" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
+								<option id="gnu.c.compiler.option.include.paths.2020681813" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false"/>
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.2147299996" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="GCC_HAS_REGEX"/>
+									<listOptionValue builtIn="false" value="TARGET_RASPBERRY_PI"/>
+									<listOptionValue builtIn="false" value="NDEBUG"/>
+									<listOptionValue builtIn="false" value="PIC"/>
+									<listOptionValue builtIn="false" value="_REENTRANT"/>
+									<listOptionValue builtIn="false" value="_LARGEFILE64_SOURCE"/>
+									<listOptionValue builtIn="false" value="_FILE_OFFSET_BITS=64"/>
+									<listOptionValue builtIn="false" value="_FORTIFY_SOURCE"/>
+									<listOptionValue builtIn="false" value="__STDC_CONSTANT_MACROS"/>
+									<listOptionValue builtIn="false" value="__STDC_LIMIT_MACROS"/>
+									<listOptionValue builtIn="false" value="TARGET_POSIX"/>
+									<listOptionValue builtIn="false" value="HAVE_LIBOPENMAX=2"/>
+									<listOptionValue builtIn="false" value="OMX"/>
+									<listOptionValue builtIn="false" value="OMX_SKIP64BIT"/>
+									<listOptionValue builtIn="false" value="USE_EXTERNAL_OMX"/>
+									<listOptionValue builtIn="false" value="HAVE_LIBBCM_HOST"/>
+									<listOptionValue builtIn="false" value="USE_EXTERNAL_LIBBCM_HOST"/>
+									<listOptionValue builtIn="false" value="USE_VCHIQ_ARM"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.892471600" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1475937747" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
+								<option id="gnu.cpp.compiler.option.include.paths.813640036" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/3rd_libs/fmodex/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/3rd_libs/glfw/include/GLFW}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/3rd_libs/glfw/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/3rd_libs/utf8cpp/include/utf8}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/3rd_libs/utf8cpp/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/3rd_libs/tess2/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/3rd_libs/poco/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/3rd_libs/kiss/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/3d}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/app}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/communication}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/events}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/gl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/graphics}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/math}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/sound}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/types}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/utils}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/openFrameworks/video}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/rpi_root/usr/include/c++/4.9}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/rpi_root/opt/vc/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/rpi_root/opt/vc/include/IL}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/rpi_root/opt/vc/include/interface/vcos/pthreads}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/openFrameworks_rpi/rpi_root/opt/vc/include/interface/vmcs_host/linux}&quot;"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.2045045409" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="GCC_HAS_REGEX"/>
+									<listOptionValue builtIn="false" value="TARGET_RASPBERRY_PI"/>
+									<listOptionValue builtIn="false" value="NDEBUG"/>
+									<listOptionValue builtIn="false" value="PIC"/>
+									<listOptionValue builtIn="false" value="_REENTRANT"/>
+									<listOptionValue builtIn="false" value="_LARGEFILE64_SOURCE"/>
+									<listOptionValue builtIn="false" value="_FILE_OFFSET_BITS=64"/>
+									<listOptionValue builtIn="false" value="_FORTIFY_SOURCE"/>
+									<listOptionValue builtIn="false" value="__STDC_CONSTANT_MACROS"/>
+									<listOptionValue builtIn="false" value="__STDC_LIMIT_MACROS"/>
+									<listOptionValue builtIn="false" value="TARGET_POSIX"/>
+									<listOptionValue builtIn="false" value="HAVE_LIBOPENMAX=2"/>
+									<listOptionValue builtIn="false" value="OMX"/>
+									<listOptionValue builtIn="false" value="OMX_SKIP64BIT"/>
+									<listOptionValue builtIn="false" value="USE_EXTERNAL_OMX"/>
+									<listOptionValue builtIn="false" value="HAVE_LIBBCM_HOST"/>
+									<listOptionValue builtIn="false" value="USE_EXTERNAL_LIBBCM_HOST"/>
+									<listOptionValue builtIn="false" value="USE_VCHIQ_ARM"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.dialect.std.859814617" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.dialect.flags.637962045" name="Other dialect flags" superClass="gnu.cpp.compiler.option.dialect.flags" useByScannerDiscovery="true" value="${of_cxx_flags}" valueType="string"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.585061771" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.1847169269" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.868764403" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker">
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.711557841" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.archiver.672985001" name="Cross GCC Archiver" superClass="cdt.managedbuild.tool.gnu.cross.archiver"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.assembler.1341939719" name="Cross GCC Assembler" superClass="cdt.managedbuild.tool.gnu.cross.assembler">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.447091792" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule moduleId="packages"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="openFrameworks.null.397925978" name="openFrameworks"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Default">
+			<resource resourceType="PROJECT" workspacePath="/openFrameworks_rpi"/>
+		</configuration>
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/openFrameworks_rpi"/>
+		</configuration>
+		<configuration configurationName="Release"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.toolchain.gnu.cross.base.1423627271.1797868332;cdt.managedbuild.toolchain.gnu.cross.base.1423627271.1797868332.;cdt.managedbuild.tool.gnu.cross.c.compiler.1253948966;cdt.managedbuild.tool.gnu.c.compiler.input.892471600">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.toolchain.gnu.cross.base.1423627271;cdt.managedbuild.toolchain.gnu.cross.base.1423627271.1477667556;cdt.managedbuild.tool.gnu.cross.cpp.compiler.1191973841;cdt.managedbuild.tool.gnu.cpp.compiler.input.396803815">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.toolchain.gnu.cross.base.1423627271.1797868332;cdt.managedbuild.toolchain.gnu.cross.base.1423627271.1797868332.;cdt.managedbuild.tool.gnu.cross.cpp.compiler.1475937747;cdt.managedbuild.tool.gnu.cpp.compiler.input.585061771">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.toolchain.gnu.cross.base.1423627271;cdt.managedbuild.toolchain.gnu.cross.base.1423627271.1477667556;cdt.managedbuild.tool.gnu.cross.c.compiler.2075246648;cdt.managedbuild.tool.gnu.c.compiler.input.323511069">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
+		<buildTargets/>
+	</storageModule>
+</cproject>
