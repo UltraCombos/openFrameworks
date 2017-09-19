@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>emptyExampleEclipse</name>
+	<comment></comment>
+	<projects>
+		<project>openFrameworks_rpi</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
+			<triggers>clean,full,incremental,</triggers>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.ScannerConfigBuilder</name>
+			<triggers>full,incremental,</triggers>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.cdt.core.cnature</nature>
+		<nature>org.eclipse.cdt.core.ccnature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
+	</natures>
+	<variableList>
+		<variable>
+			<name>OF_LIBS_LOC</name>
+			<value>$%7BOF_ROOT_LOC%7D/libs</value>
+		</variable>
+		<variable>
+			<name>OF_ROOT_LOC</name>
+			<value>$%7BPARENT-3-PROJECT_LOC%7D</value>
+		</variable>
+		<variable>
+			<name>RPI_ROOT_LOC</name>
+			<value>file:/home/pi/RPI_ROOT</value>
+		</variable>
+		<variable>
+			<name>TOOLCHAIN_ROOT_LOC</name>
+			<value>file:/opt/cross/bin</value>
+		</variable>
+	</variableList>
+</projectDescription>
