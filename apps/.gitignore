@@ -5,10 +5,14 @@
 # include official directories
 !projectGenerator/
 !devApps/
+!rpiApps/
 
 # ignore bin folders' contents, except data folder therein
 /devApps/*/bin/*
 !/devApps/*/bin/data/
+
+/rpiApps/*/bin/*
+!/rpiApps/*/bin/data/
 
 /devApps/*/.cproject
 /devApps/*/.project
