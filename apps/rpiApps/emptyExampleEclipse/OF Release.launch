@@ -21,8 +21,8 @@
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="remote"/>
 <booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="true"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN_SYMBOL" value="main"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="bin/${project_name}"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="RemoteSystemsTempFiles"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="bin/${ProjName}"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="emptyExampleEclipse"/>
 <booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="false"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value=""/>
 <booleanAttribute key="org.eclipse.cdt.launch.remote.RemoteCDSFDebuggerTab.DEFAULTS_SET" value="true"/>
@@ -32,7 +32,13 @@
 <stringAttribute key="org.eclipse.debug.core.ATTR_PRERUN_CMDS" value="chmod 777 ~/remote_debug_workspace/of_app"/>
 <booleanAttribute key="org.eclipse.debug.core.ATTR_SKIP_DOWNLOAD_TO_TARGET" value="false"/>
 <stringAttribute key="org.eclipse.debug.core.ATTR_TARGET_PATH" value="/home/pi/remote_debug_workspace/of_app"/>
-<stringAttribute key="org.eclipse.debug.core.REMOTE_TCP" value="RaspberryPi"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/emptyExampleEclipse"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.debug.core.REMOTE_TCP" value="Local"/>
 <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
 <listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
 </listAttribute>

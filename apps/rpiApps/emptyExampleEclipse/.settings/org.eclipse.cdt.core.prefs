@@ -1,4 +1,7 @@
 eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.533226361/APPNAME/delimiter=\:
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.533226361/APPNAME/operation=append
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.533226361/APPNAME/value=${ProjName}
 environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.533226361/ECLIPSE_BUILD/delimiter=\:
 environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.533226361/ECLIPSE_BUILD/operation=append
 environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.533226361/ECLIPSE_BUILD/value=1
@@ -22,6 +25,9 @@ environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.533226361/TOOLCH
 environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.533226361/TOOLCHAIN_ROOT/value=/opt/cross/bin
 environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.533226361/append=true
 environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.533226361/appendContributed=true
+environment/project/cdt.managedbuild.config.gnu.cross.exe.release.316365308/APPNAME/delimiter=\:
+environment/project/cdt.managedbuild.config.gnu.cross.exe.release.316365308/APPNAME/operation=append
+environment/project/cdt.managedbuild.config.gnu.cross.exe.release.316365308/APPNAME/value=${ProjName}
 environment/project/cdt.managedbuild.config.gnu.cross.exe.release.316365308/ECLIPSE_BUILD/delimiter=\:
 environment/project/cdt.managedbuild.config.gnu.cross.exe.release.316365308/ECLIPSE_BUILD/operation=append
 environment/project/cdt.managedbuild.config.gnu.cross.exe.release.316365308/ECLIPSE_BUILD/value=1
