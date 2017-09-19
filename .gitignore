@@ -20,6 +20,29 @@ addons/*
 # see apps/.gitignore
 apps/*
 
+#########################
+# core apps
+#########################
+
+# include official directories
+!apps/projectGenerator/
+!apps/devApps/
+!apps/rpiApps/
+
+# ignore bin folders' contents, except data folder therein
+apps/devApps/*/bin/*
+!apps/devApps/*/bin/data/
+
+apps/rpiApps/*/bin/*
+!apps/rpiApps/*/bin/data/
+
+apps/devApps/*/.cproject
+apps/devApps/*/.project
+apps/devApps/*/.settings/
+
+# don't ignore the .gitignore file
+!apps/.gitignore
+
 # also, see examples/.gitignore
 
 #########################
@@ -38,7 +61,7 @@ tests/**/[Rr]elease*/
 tests/**/gcc-debug/
 tests/**/gcc-release/
 *.mode*
-#*.app/
+*.app/
 *.pyc
 .svn/
 *.log
