@@ -35,6 +35,7 @@ apps/devApps/*/bin/*
 
 apps/rpiApps/*/bin/*
 !apps/rpiApps/*/bin/data/
+apps/rpiApps/*/.settings/language.settings.xml
 
 apps/devApps/*/.cproject
 apps/devApps/*/.project
