@@ -1468,13 +1468,166 @@ void ofAppEGLWindow::readNativeUDevEvents() {
 	}
 }
 
+namespace {
+	bool gf_check_ev_key_event(struct input_event& ev, ofKeyEventArgs& keyEvent, bool& pushKeyEvent) {
+		char key = 0;
+		if(ev.value == 0) {
+			// key released
+			keyEvent.type = ofKeyEventArgs::Released;
+		} else if(ev.value == 1) {
+			// key pressed
+			keyEvent.type = ofKeyEventArgs::Pressed;
+		} else if(ev.value == 2) {
+			// key repeated
+			keyEvent.type = ofKeyEventArgs::Pressed;
+		} else {
+			// unknown ev.value
+		}
+
+		switch (ev.code) {
+		case KEY_RIGHTSHIFT:
+		case KEY_LEFTSHIFT:
+			kb.shiftPressed = ev.value;
+			break;
+		case KEY_RIGHTCTRL:
+		case KEY_LEFTCTRL:
+			break;
+		case KEY_CAPSLOCK:
+			if (ev.value == 1) {
+				if (kb.capsLocked) {
+					kb.capsLocked = 0;
+				} else {
+					kb.capsLocked = 1;
+				}
+			}
+			break;
+
+		case KEY_ESC:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_ESC;
+			break;
+		case KEY_BACKSPACE:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_BACKSPACE;
+			break;
+		case KEY_DELETE:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_DEL;
+			break;
+		case KEY_F1:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_F1;
+			break;
+		case KEY_F2:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_F2;
+			break;
+		case KEY_F3:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_F3;
+			break;
+		case KEY_F4:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_F4;
+			break;
+		case KEY_F5:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_F5;
+			break;
+		case KEY_F6:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_F6;
+			break;
+		case KEY_F7:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_F7;
+			break;
+		case KEY_F8:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_F8;
+			break;
+		case KEY_F9:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_F9;
+			break;
+		case KEY_F10:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_F10;
+			break;
+		case KEY_F11:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_F11;
+			break;
+		case KEY_F12:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_F12;
+			break;
+		case KEY_LEFT:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_LEFT;
+			break;
+		case KEY_UP:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_UP;
+			break;
+		case KEY_RIGHT:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_RIGHT;
+			break;
+		case KEY_DOWN:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_DOWN;
+			break;
+		case KEY_PAGEUP:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_PAGE_UP;
+			break;
+		case KEY_PAGEDOWN:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_PAGE_DOWN;
+			break;
+		case KEY_HOME:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_HOME;
+			break;
+		case KEY_END:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_END;
+			break;
+		case KEY_INSERT:
+			pushKeyEvent = true;
+			keyEvent.key = OF_KEY_INSERT;
+			break;
+
+		default:
+			// VERY RUDIMENTARY KEY MAPPING WITH MAPS ABOVE
+			if(ev.code < sizeof(lowercase_map)) {
+				if (kb.shiftPressed) {
+					key = uppercase_map[ev.code];
+					if (kb.capsLocked) keyEvent.key = tolower(key);
+					keyEvent.key = key;
+					pushKeyEvent = true;
+				} else {
+					key = lowercase_map[ev.code];
+					if (kb.capsLocked) key = toupper(key);
+					keyEvent.key = key;
+					pushKeyEvent = true;
+				}
+			} else {
+				return false;
+			}
+			break;
+		}
+		return true;
+	}
+}
+
 //------------------------------------------------------------
 void ofAppEGLWindow::readNativeKeyboardEvents() {
 	// http://www.diegm.uniud.it/loghi/CE2/kbd.pdf
 	// http://cgit.freedesktop.org/~whot/evtest/plain/evtest.c
 	// https://strcpy.net/b/archives/2010/11/17/abusing_the_linux_input_subsystem/index.html
 	struct input_event ev;
-	char key = 0;
 
 	int nBytesRead = read(keyboard_fd, &ev,sizeof(struct input_event));
 
@@ -1484,151 +1637,9 @@ void ofAppEGLWindow::readNativeKeyboardEvents() {
 	while(nBytesRead >= 0) {
 
 		if (ev.type==EV_KEY) {
-			if(ev.value == 0) {
-				// key released
-				keyEvent.type = ofKeyEventArgs::Released;
-			} else if(ev.value == 1) {
-				// key pressed
-				keyEvent.type = ofKeyEventArgs::Pressed;
-			} else if(ev.value == 2) {
-				// key repeated
-				keyEvent.type = ofKeyEventArgs::Pressed;
-			} else {
-				// unknown ev.value
-			}
-
-			switch (ev.code) {
-			case KEY_RIGHTSHIFT:
-			case KEY_LEFTSHIFT:
-				kb.shiftPressed = ev.value;
-				break;
-			case KEY_RIGHTCTRL:
-			case KEY_LEFTCTRL:
-				break;
-			case KEY_CAPSLOCK:
-				if (ev.value == 1) {
-					if (kb.capsLocked) {
-						kb.capsLocked = 0;
-					} else {
-						kb.capsLocked = 1;
-					}
-				}
-				break;
-
-			case KEY_ESC:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_ESC;
-				break;
-			case KEY_BACKSPACE:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_BACKSPACE;
-				break;
-			case KEY_DELETE:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_DEL;
-				break;
-			case KEY_F1:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_F1;
-				break;
-			case KEY_F2:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_F2;
-				break;
-			case KEY_F3:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_F3;
-				break;
-			case KEY_F4:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_F4;
-				break;
-			case KEY_F5:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_F5;
-				break;
-			case KEY_F6:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_F6;
-				break;
-			case KEY_F7:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_F7;
-				break;
-			case KEY_F8:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_F8;
-				break;
-			case KEY_F9:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_F9;
-				break;
-			case KEY_F10:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_F10;
-				break;
-			case KEY_F11:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_F11;
-				break;
-			case KEY_F12:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_F12;
-				break;
-			case KEY_LEFT:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_LEFT;
-				break;
-			case KEY_UP:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_UP;
-				break;
-			case KEY_RIGHT:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_RIGHT;
-				break;
-			case KEY_DOWN:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_DOWN;
-				break;
-			case KEY_PAGEUP:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_PAGE_UP;
-				break;
-			case KEY_PAGEDOWN:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_PAGE_DOWN;
-				break;
-			case KEY_HOME:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_HOME;
-				break;
-			case KEY_END:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_END;
-				break;
-			case KEY_INSERT:
-				pushKeyEvent = true;
-				keyEvent.key = OF_KEY_INSERT;
-				break;
-
-			default:
-				// VERY RUDIMENTARY KEY MAPPING WITH MAPS ABOVE
-				if(ev.code < sizeof(lowercase_map)) {
-					if (kb.shiftPressed) {
-						key = uppercase_map[ev.code];
-						if (kb.capsLocked) keyEvent.key = tolower(key);
-						keyEvent.key = key;
-						pushKeyEvent = true;
-					} else {
-						key = lowercase_map[ev.code];
-						if (kb.capsLocked) key = toupper(key);
-						keyEvent.key = key;
-						pushKeyEvent = true;
-					}
-				} else {
-					ofLogNotice("ofAppEGLWindow") << "readKeyboardEvents(): input_event.code is outside of our small range";
-				}
+			bool yes = gf_check_ev_key_event(ev, keyEvent, pushKeyEvent);
+			if (!yes) {
+				ofLogNotice("ofAppEGLWindow") << "readKeyboardEvents(): input_event.code is outside of our small range";
 			}
 		} else if(ev.type == EV_MSC) {
 			// EV_MSC events are used for input and output events that
@@ -1660,8 +1671,10 @@ void ofAppEGLWindow::readNativeMouseEvents() {
 	struct input_event ev;
 
 	static ofMouseEventArgs mouseEvent;
+	static ofKeyEventArgs keyEvent;
 
 	bool pushMouseEvent = false;
+	bool pushKeyEvent = false;
 
 	int nBytesRead = read(mouse_fd, &ev,sizeof(struct input_event));
 
@@ -1744,7 +1757,10 @@ void ofAppEGLWindow::readNativeMouseEvents() {
 					ofLogNotice("ofAppEGLWindow") << "readMouseEvents(): EV_KEY : unknown ev.value = " << ev.value;
 				}
 			} else {
-				ofLogNotice("ofAppEGLWindow") << "readMouseEvents(): EV_KEY : unknown ev.code = " << ev.code;
+				bool yes = gf_check_ev_key_event(ev, keyEvent, pushKeyEvent);
+				if (!yes) {
+					ofLogNotice("ofAppEGLWindow") << "readMouseEvents(): EV_KEY : unknown ev.code = " << ev.code;
+				}
 			}
 			// not sure why we are getting that event here
 		} else if(ev.type == EV_MSC) {
@@ -1784,6 +1800,13 @@ void ofAppEGLWindow::readNativeMouseEvents() {
 			mouseEvents.push(mouseEvent);
 			unlock();
 			pushMouseEvent = false;
+		}
+
+		if(pushKeyEvent){
+			lock();
+			keyEvents.push(keyEvent);
+			unlock();
+			pushKeyEvent = false;
 		}
 
 		nBytesRead = read(mouse_fd, &ev,sizeof(struct input_event));
