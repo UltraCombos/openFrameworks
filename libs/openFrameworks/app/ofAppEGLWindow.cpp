@@ -1726,7 +1726,7 @@ void ofAppEGLWindow::readNativeMouseEvents() {
 					mouseEvent.button = OF_MOUSE_BUTTON_LEFT;
 					pushMouseEvent = true;
 				} else { // unknown
-					ofLogNotice("ofAppEGLWindow") << "readMouseEvents(): EV_KEY : unknown ev.value = " << ev.value;
+					ofLogVerbose("ofAppEGLWindow") << "readMouseEvents(): EV_KEY : unknown ev.value = " << ev.value;
 				}
 			} else if(ev.code == BTN_MIDDLE) {
 				if(ev.value == 0) { // release
@@ -1740,7 +1740,7 @@ void ofAppEGLWindow::readNativeMouseEvents() {
 					mouseEvent.button = OF_MOUSE_BUTTON_MIDDLE;
 					pushMouseEvent = true;
 				} else { // unknown
-					ofLogNotice("ofAppEGLWindow") << "readMouseEvents(): EV_KEY : unknown ev.value = " << ev.value;
+					ofLogVerbose("ofAppEGLWindow") << "readMouseEvents(): EV_KEY : unknown ev.value = " << ev.value;
 				}
 			} else if(ev.code == BTN_RIGHT) {
 				if(ev.value == 0) { // release
@@ -1754,12 +1754,12 @@ void ofAppEGLWindow::readNativeMouseEvents() {
 					mouseEvent.button = OF_MOUSE_BUTTON_RIGHT;
 					pushMouseEvent = true;
 				} else {
-					ofLogNotice("ofAppEGLWindow") << "readMouseEvents(): EV_KEY : unknown ev.value = " << ev.value;
+					ofLogVerbose("ofAppEGLWindow") << "readMouseEvents(): EV_KEY : unknown ev.value = " << ev.value;
 				}
 			} else {
 				bool yes = gf_check_ev_key_event(ev, keyEvent, pushKeyEvent);
 				if (!yes) {
-					ofLogNotice("ofAppEGLWindow") << "readMouseEvents(): EV_KEY : unknown ev.code = " << ev.code;
+					ofLogVerbose("ofAppEGLWindow") << "readMouseEvents(): EV_KEY : unknown ev.code = " << ev.code;
 				}
 			}
 			// not sure why we are getting that event here
